@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import customer1 from "./assets/customers/customer-1.jpg";
 import customer2 from "./assets/customers/customer-2.jpg";
 import customer3 from "./assets/customers/customer-3.jpg";
@@ -36,15 +36,70 @@ const Stats = ({ title, value }) => (
 
 const App = () => {
   return (
-    <div className="py-5 sm:py-9 px-4 md:px-12 bg-customGreen">
-      <div className="w-full px-2 sm:px-5">
+    <div className="w-screen overflow-hidden bg-customGreen">
+      <Section className="pb-0">
         <Header />
         <MainContent />
+      </Section>
+      <div className="relative flex justify-center">
+        <div className="aspect-square h-[2000px] bg-[#f5f5eb] rounded-full absolute top-0 left-1/2 -translate-x-1/2 z-0"></div>
+        <div className="relative z-10 flex flex-col items-center mt-20">
+          <span className="uppercase text-xl">- Process</span>
+          <h2 className=" text-3xl font-bold mt-4">How it works</h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3  my-7 w-10/12 pl-4 transform sm:translate-x-16">
+            <div className="flex flex-col items-center">
+              <div className="h-9 bg-black aspect-square flex justify-center items-center rounded-full">
+                <div className="text-white text-lg">1</div>
+              </div>
+              <div className="flex flex-col items-center w-10/12 mt-4">
+                <h3>Create an Account</h3>
+                <p className="text-gray-600 text-sm text-center">
+                  Sign up and set up your profile quickly.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <div className="border-l-2 sm:border-l-0 sm:border-b-2 border-dashed border-gray-500 h-12 sm:h-0 sm:w-24"></div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="h-9 bg-black aspect-square flex justify-center items-center rounded-full">
+                <div className="text-white text-lg">2</div>
+              </div>
+              <div className="flex flex-col items-center w-10/12 mt-4">
+                <h3>Transfer & Manage Funds</h3>
+                <p className="text-gray-600 text-sm text-center">
+                  Transfer money instantly and access your payment history
+                  anytime.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <div className="border-l-2 sm:border-l-0 sm:border-b-2 border-dashed border-gray-500 h-12 sm:h-0 sm:w-24"></div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="h-9 bg-black aspect-square flex justify-center items-center rounded-full">
+                <div className="text-white text-lg">3</div>
+              </div>
+              <div className="flex flex-col items-center w-10/12 mt-4">
+                <h3>Manage Loans</h3>
+                <p className="text-gray-600 text-sm text-center">
+                  Apply for loans and track your repayment progress
+                  effortlessly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
+const Section = ({ children, className }) => (
+  <div className={`pt-3 sm:pt-5 w-full px-4 sm:px-10 ${className}`}>
+    {children}
+  </div>
+);
 // Header Component
 const Header = () => (
   <nav className="flex justify-between flex-wrap p-2 md:p-4">
@@ -122,7 +177,7 @@ const CustomerImages = () => (
 
 // Stats Section Component
 const StatsSection = () => (
-  <div className="flex items-center space-x-10 p-6 rounded-lg mt-6 justify-center sm:justify-normal ">
+  <div className="flex items-center space-x-10 px-6 pt-6 rounded-lg mt-6 justify-center sm:justify-normal ">
     <Stats title="Transactions" value="$ 12M+" />
     <Stats title="Active Users" value="1200+" />
   </div>
@@ -132,7 +187,7 @@ const StatsSection = () => (
 const HeroImageSection = () => (
   <div>
     <div className="relative flex justify-center items-center">
-      <div className="absolute aspect-square h-[90%] rounded-full bg-[#ffffe6] z-0"></div>
+      <div className="absolute aspect-square h-[90%] rounded-full bg-[#f5f5eb] z-0"></div>
       <img
         src={HeroImage}
         alt="Hero Image"
