@@ -46,7 +46,7 @@ const App = () => {
         <div className="relative z-10 flex flex-col items-center mt-20">
           <span className="uppercase text-xl">- Process</span>
           <h2 className=" text-3xl font-bold mt-4">How it works</h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3  my-7 w-10/12 pl-4 transform sm:translate-x-16">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-3  my-7 w-10/12 pl-4 transform lg:translate-x-16">
             <div className="flex flex-col items-center">
               <div className="h-9 bg-black aspect-square flex justify-center items-center rounded-full">
                 <div className="text-white text-lg">1</div>
@@ -59,7 +59,7 @@ const App = () => {
               </div>
             </div>
             <div className="flex items-center">
-              <div className="border-l-2 sm:border-l-0 sm:border-b-2 border-dashed border-gray-500 h-12 sm:h-0 sm:w-24"></div>
+              <div className="border-l-2 lg:border-l-0 lg:border-b-2 border-dashed border-gray-500 h-12 lg:h-0 lg:w-24"></div>
             </div>
             <div className="flex flex-col items-center">
               <div className="h-9 bg-black aspect-square flex justify-center items-center rounded-full">
@@ -67,14 +67,14 @@ const App = () => {
               </div>
               <div className="flex flex-col items-center w-10/12 mt-4">
                 <h3>Transfer & Manage Funds</h3>
-                <p className="text-gray-600 text-sm text-center">
+                <p className="text-gray-600 text-lg text-center">
                   Transfer money instantly and access your payment history
                   anytime.
                 </p>
               </div>
             </div>
             <div className="flex items-center">
-              <div className="border-l-2 sm:border-l-0 sm:border-b-2 border-dashed border-gray-500 h-12 sm:h-0 sm:w-24"></div>
+              <div className="border-l-2 lg:border-l-0 lg:border-b-2 border-dashed border-gray-500 h-12 lg:h-0 lg:w-24"></div>
             </div>
             <div className="flex flex-col items-center">
               <div className="h-9 bg-black aspect-square flex justify-center items-center rounded-full">
