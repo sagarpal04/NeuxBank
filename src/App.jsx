@@ -36,7 +36,7 @@ const Stats = ({ title, value }) => (
 
 const App = () => {
   return (
-    <div className="w-screen overflow-hidden bg-customGreen">
+    <div className="w-screen overflow-hidden bg-customGreen min-h-screen">
       <Section className="pb-0">
         <Header />
         <MainContent />
@@ -102,7 +102,7 @@ const Section = ({ children, className }) => (
 );
 // Header Component
 const Header = () => (
-  <nav className="flex justify-between flex-wrap p-2 md:p-4">
+  <nav className="flex justify-between flex-wrap p-2 md:p-4 max-w-[1800px] mx-auto">
     <div className="flex items-center gap-6">
       <Logo />
       <h2 className="uppercase text-2xl font-bold">Neux Bank</h2>
@@ -142,7 +142,7 @@ const Logo = () => (
 
 // Main Content Component
 const MainContent = () => (
-  <div className="mt-12 md:px-8 grid gap-x-4 grid-cols-1 lg:grid-cols-2  md:mt-24">
+  <div className="mt-12 md:px-8 grid gap-x-4 grid-cols-1 lg:grid-cols-2 max-w-[1600px] mx-auto md:mt-24">
     <div>
       <h1 className="text-4xl md:text-6xl font-bold leading-tight">
         MAKE PAYMENTS EASY, SIMPLIFY YOUR FINANCES
